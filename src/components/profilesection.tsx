@@ -5,7 +5,7 @@ const ProfileSection: React.FC = () => {
   return (
     <section className="flex flex-col items-center justify-center h-screen bg-gradient-to-r from-purple-500 to-indigo-500 dark:from-gray-800 dark:to-black text-white dark:text-gray-300 text-center">
       <img
-        src="/path-to-your-image.jpg"
+        src=""
         alt="Profile"
         className="rounded-full w-24 h-24 mb-4"
       />
