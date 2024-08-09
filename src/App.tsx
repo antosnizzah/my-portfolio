@@ -7,12 +7,16 @@ import ProfileSection from './components/profilesection';
 // import Experience from './components/Experience';
 // import Contact from './components/Contact';
 import Footer from './components/Footer';
+import AboutMe from './components/About';
+import MySkills from './components/Skills';
 
 const App: React.FC = () => {
   return (
     <div className="dark:bg-gray-900 dark:text-white">
       <Navbar />
       <ProfileSection />
+      <AboutMe/>
+      <MySkills/>
       <Footer />
      
     </div>
