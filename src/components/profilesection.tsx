@@ -6,7 +6,7 @@ import profileImage from '../assets/IMG_8390.jpg'; // Adjust the path based on y
 
 const ProfileSection: React.FC = () => {
   const [text] = useTypewriter({
-    words: ["I'm a passionate software engineer with a knack for crafting elegant solutions to complex problems."],
+    words: ["I'm a passionate software engineer with a knack <br/> for crafting elegant solutions to complex problems."],
     loop: 1,
     typeSpeed: 50,
     deleteSpeed: 300,
