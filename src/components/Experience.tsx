@@ -15,7 +15,7 @@ const services = [
   {
     icon: <Quote className="w-8 h-8 text-yellow-400" />, // Example icon
     title: 'Project Management',
-    description: 'As a certified Scrum Master, I manage teams to successfully deliver all client projects.',
+    description: 'As a certified software engineer, I manage teams to successfully deliver all client projects.',
   },
   {
     icon: <PenTool className="w-8 h-8 text-yellow-400" />, // Example icon
@@ -34,7 +34,7 @@ const WhatImDoing: React.FC = () => {
         {services.map((service, index) => (
           <div
             key={index}
-            className="bg-gray-800 p-6 rounded-lg shadow-lg hover:shadow-xl transition-shadow duration-300"
+            className="bg-gray-800 p-6 rounded-lg shadow-lg transform transition-all duration-500 hover:scale-105 hover:shadow-2xl hover:bg-gray-700"
           >
             <div className="flex items-center mb-4">
               {service.icon}
