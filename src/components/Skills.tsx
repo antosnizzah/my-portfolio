@@ -2,8 +2,7 @@ import React from 'react';
 
 const skills = [
   'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Node.js',
-  'Git', 'Tailwind',  'MySQL',
-  'PostgreSQL', 'Redux', 'Hono', 'Drizzle-orm',
+  'Git', 'Tailwind', 'MySQL', 'PostgreSQL', 'Redux', 'Hono', 'Drizzle-orm',
 ];
 
 const colors = [
@@ -13,15 +12,15 @@ const colors = [
 
 const MySkills: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gray-900 text-white flex flex-col justify-center items-center p-8">
-      <h2 className="text-4xl font-bold mb-8">My Skills</h2>
-      <div className="flex flex-wrap justify-center gap-4">
+    <div className="bg-gray-900 text-white flex flex-col justify-center items-center p-8">
+      <h2 className="text-3xl sm:text-4xl font-bold mb-8 text-center">My Skills</h2>
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4">
         {skills.map((skill, index) => (
           <div
             key={index}
-            className={`px-4 py-2 rounded-lg shadow-lg ${colors[index % colors.length]} transform transition-transform hover:scale-110`}
+            className={`px-4 py-2 rounded-lg shadow-md transform transition-all hover:scale-105 hover:shadow-xl ${colors[index % colors.length]} `}
           >
-            {skill}
+            <p className="text-center font-semibold">{skill}</p>
           </div>
         ))}
       </div>
