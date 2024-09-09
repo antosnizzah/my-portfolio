@@ -1,9 +1,9 @@
 import React from 'react';
 
 const skills = [
-  'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Next.js', 'Node.js',
-  'Git', 'Tailwind', 'Shadcn UI', 'Three.js', 'Framer Motion', 'Prisma', 'MySQL',
-  'PostgreSQL', 'Redux', 'Express', 'Python', 'Django'
+  'HTML', 'CSS', 'JavaScript', 'TypeScript', 'React', 'Node.js',
+  'Git', 'Tailwind',  'MySQL',
+  'PostgreSQL', 'Redux', 'Hono', 'Drizzle-orm',
 ];
 
 const colors = [
