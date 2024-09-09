@@ -4,11 +4,11 @@ import ProfileSection from './components/profilesection';
 // import About from './components/About';
 // import Projects from './components/Projects';
 // import Skills from './components/Skills';
-// import Experience from './components/Experience';
 // import Contact from './components/Contact';
 import Footer from './components/Footer';
 import AboutMe from './components/About';
 import MySkills from './components/Skills';
+import WhatImDoing from './components/Experience';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +17,7 @@ const App: React.FC = () => {
       <ProfileSection />
       <AboutMe/>
       <MySkills/>
+      <WhatImDoing/>
       <Footer />
      
     </div>
