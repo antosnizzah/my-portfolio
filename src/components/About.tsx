@@ -7,17 +7,17 @@ const AboutMe: React.FC = () => {
       <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8">
         {/* Left side: Profile Card */}
         <div className="w-full md:w-1/3 lg:w-1/4 bg-gray-900 p-6 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold text-center mb-4">Zahir Haniche</h2>
-          <p className="text-center text-gray-400 mb-6">Front-End Software Engineer</p>
+          <h2 className="text-3xl font-bold text-center mb-4">anthony gichuki</h2>
+          <p className="text-center text-gray-400 mb-6">Full-stack  Software Engineer</p>
           <hr className="border-gray-700 mb-6" />
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <Mail className="w-6 h-6 text-yellow-400" />
-              <span>haniche.zahir@gmail.com</span>
+              <span>antonygatitu327@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <Phone className="w-6 h-6 text-yellow-400" />
-              <span>+33 6 62 02 85 52</span>
+              <span>+254 799 16 31 01</span>
             </div>
             <div className="flex items-center space-x-4">
               <Calendar className="w-6 h-6 text-yellow-400" />
@@ -25,7 +25,7 @@ const AboutMe: React.FC = () => {
             </div>
             <div className="flex items-center space-x-4">
               <MapPin className="w-6 h-6 text-yellow-400" />
-              <span>Paris, France</span>
+              <span>Nairobi, Kenya</span>
             </div>
           </div>
           <div className="flex justify-center mt-6 space-x-4">
