@@ -1,24 +1,45 @@
 import React from 'react';
-import { Linkedin, Github } from 'lucide-react';
-
-// Replace with the correct image path
-const profileImage = '/path/to/your-image.jpg'; // Example placeholder
+import { Linkedin, Github, Mail, Phone, Calendar, MapPin } from 'lucide-react';
 
 const AboutMe: React.FC = () => {
   return (
     <div className="min-h-screen bg-gradient-to-r from-purple-500 to-indigo-500 dark:from-gray-800 dark:to-black text-white dark:text-gray-300 p-6">
       <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8">
-        {/* Left side: Image */}
-        <div className="w-full md:w-1/2 lg:w-1/3 flex justify-center mb-8 md:mb-0">
-          <img
-            src={profileImage}
-            alt="Profile"
-            className="w-72 h-72 object-cover rounded-full shadow-lg border-4 border-white dark:border-gray-800 transform transition-transform duration-500 hover:scale-105"
-          />
+        {/* Left side: Profile Card */}
+        <div className="w-full md:w-1/3 lg:w-1/4 bg-gray-900 p-6 rounded-lg shadow-lg">
+          <h2 className="text-3xl font-bold text-center mb-4">Zahir Haniche</h2>
+          <p className="text-center text-gray-400 mb-6">Front-End Software Engineer</p>
+          <hr className="border-gray-700 mb-6" />
+          <div className="space-y-4">
+            <div className="flex items-center space-x-4">
+              <Mail className="w-6 h-6 text-yellow-400" />
+              <span>haniche.zahir@gmail.com</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Phone className="w-6 h-6 text-yellow-400" />
+              <span>+33 6 62 02 85 52</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <Calendar className="w-6 h-6 text-yellow-400" />
+              <span>1994</span>
+            </div>
+            <div className="flex items-center space-x-4">
+              <MapPin className="w-6 h-6 text-yellow-400" />
+              <span>Paris, France</span>
+            </div>
+          </div>
+          <div className="flex justify-center mt-6 space-x-4">
+            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+              <Linkedin className="w-6 h-6 text-gray-400 hover:text-white transition-colors duration-300" />
+            </a>
+            <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+              <Github className="w-6 h-6 text-gray-400 hover:text-white transition-colors duration-300" />
+            </a>
+          </div>
         </div>
 
-        {/* Right side: Text */}
-        <div className="w-full md:w-1/2 lg:w-2/3 text-center md:text-left border-2 border-white dark:border-gray-800 p-8 rounded-lg shadow-lg bg-gray-900 bg-opacity-50 transform transition-transform duration-500 hover:scale-105">
+        {/* Right side: About Me Text */}
+        <div className="w-full md:w-2/3 lg:w-3/4 text-center md:text-left border-2 border-white dark:border-gray-800 p-8 rounded-lg shadow-lg bg-gray-900 bg-opacity-50 transform transition-transform duration-500 hover:scale-105">
           <h1 className="text-5xl font-bold mb-4 text-cyan-300">About Me</h1>
           <p className="text-xl mb-4">
             After high school, I pursued my passion for programming by joining Kirinyaga University and enrolling in a coding bootcamp with Teach2Give, where I learned full-stack web development. My favorite part of programming is solving problems. I love the feeling of finally figuring out a solution.
@@ -32,14 +53,6 @@ const AboutMe: React.FC = () => {
           <p className="text-xl mb-8">
             In my free time, I enjoy playing video games, watching movies, and reading novels. I'm also interested in <span className="text-purple-300">psychology</span> and <span className="text-purple-300">robotics</span>.
           </p>
-          <div className="flex justify-center md:justify-start space-x-6">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
-              <Linkedin className="w-8 h-8 text-gray-300 hover:text-white transition-colors duration-300" />
-            </a>
-            <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
-              <Github className="w-8 h-8 text-gray-300 hover:text-white transition-colors duration-300" />
-            </a>
-          </div>
         </div>
       </div>
     </div>
