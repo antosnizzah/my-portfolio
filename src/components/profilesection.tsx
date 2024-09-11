@@ -2,11 +2,11 @@ import React from 'react';
 import { Linkedin, Github } from 'lucide-react';
 import { Fade } from 'react-awesome-reveal';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
-import profileImage from '../assets/IMG_8390.jpg'; // Adjust the path based on your folder structure
+import profileImage from '../assets/IMG_8390.jpg'; // Adjust path based on your folder structure
 
 const ProfileSection: React.FC = () => {
   const [text] = useTypewriter({
-    words: ["I'm a passionate software engineer with a knack."],
+    words: ["I'm a passionate software engineer with a knack for creating intuitive user interfaces."],
     loop: 1,
     typeSpeed: 50,
     deleteSpeed: 300,
@@ -14,10 +14,16 @@ const ProfileSection: React.FC = () => {
   });
 
   return (
-    <section className="flex flex-col md:flex-row items-center justify-center min-h-screen bg-gradient-to-r from-purple-500 to-indigo-500 dark:from-gray-800 dark:to-black text-white dark:text-gray-300 text-center md:text-left p-6">
+    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen bg-black text-white dark:text-gray-300 text-center md:text-left p-6">
+      {/* Live Animated Background */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="animate-pulse opacity-50 bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 w-full h-full"></div>
+      </div>
+
+      {/* Content on top of the background */}
       <Fade direction="left" triggerOnce>
         <div className="relative mb-6 md:mb-0 md:mr-12">
-          <div className="w-64 h-64 rounded-full border-8 border-white dark:border-gray-300 flex items-center justify-center p-1 animate-spin-slow">
+          <div className="w-64 h-64 rounded-full border-8 border-white dark:border-gray-300 flex items-center justify-center p-1 animate-spin-slow mt-12 md:mt-0"> {/* Added mt-12 for spacing on small screens */}
             <img
               src={profileImage}
               alt="Profile"
@@ -26,8 +32,9 @@ const ProfileSection: React.FC = () => {
           </div>
         </div>
       </Fade>
+
       <Fade direction="right" triggerOnce>
-        <div>
+        <div className="relative z-10">
           <h1 className="text-5xl font-bold mb-4 text-cyan-300">
             Hello, I'm Antony Gichuki
           </h1>
