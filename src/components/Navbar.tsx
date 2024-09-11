@@ -1,9 +1,9 @@
 import React, { useState } from 'react';
-import { Moon, Sun, Menu, X } from 'lucide-react'; // Import X for close icon
+import { Moon, Sun, Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false); // State for toggling mobile menu
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
@@ -66,13 +66,14 @@ const Navbar: React.FC = () => {
         </div>
       </div>
 
-      {/* Mobile Navigation Links */}
+      {/* Mobile Navigation Links (Left-Side) */}
       <div
-        className={`md:hidden transition-all duration-500 ease-in-out ${
-          isMenuOpen ? 'max-h-screen opacity-100' : 'max-h-0 opacity-0'
-        } overflow-hidden`}
+        className={`fixed top-0 left-0 w-64 bg-gray-900 transition-transform duration-500 ease-in-out transform ${
+          isMenuOpen ? 'translate-x-0' : '-translate-x-full'
+        }`}
+        style={{ maxHeight: 'calc(100vh - 100px)', paddingTop: '60px' }} // Adjust height and top padding
       >
-        <div className="flex flex-col items-center space-y-4 py-4 bg-gray-900">
+        <div className="flex flex-col items-start space-y-4 py-4 px-6 overflow-y-auto h-full">
           <a href="#home" className="hover:text-gray-300">
             Home
           </a>
