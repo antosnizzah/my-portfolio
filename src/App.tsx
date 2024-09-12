@@ -9,6 +9,7 @@ import Footer from './components/Footer';
 import AboutMe from './components/About';
 import MySkills from './components/Skills';
 import WhatImDoing from './components/Experience';
+import ProjectsSection from './components/Projects';
 
 const App: React.FC = () => {
   return (
@@ -17,6 +18,7 @@ const App: React.FC = () => {
       <ProfileSection />
       <AboutMe/>
       <MySkills/>
+      <ProjectsSection/>
       <WhatImDoing/>
       <Footer />
      
