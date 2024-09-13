@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 
-const ProjectsSection: React.FC = () => {
+const ProjectsSection = () => {
   interface Project {
     id: number;
     name: string;

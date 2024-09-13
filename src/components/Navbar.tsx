@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
+import {Link } from  'react-router-dom'
 
 const Navbar: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -26,24 +27,14 @@ const Navbar: React.FC = () => {
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-8">
-          <a href="#home" className="hover:text-gray-300">
-            Home
-          </a>
-          <a href="#about" className="hover:text-gray-300">
-            About
-          </a>
-          <a href="#projects" className="hover:text-gray-300">
-            Projects
-          </a>
-          <a href="#skills" className="hover:text-gray-300">
-            Skills
-          </a>
-          <a href="#experience" className="hover:text-gray-300">
-            Experience
-          </a>
-          <a href="#contact" className="hover:text-gray-300">
-            Contact
-          </a>
+          <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">About</Link></li>
+        <li><Link to="/">projects</Link></li>
+        <li><Link to="/">skills</Link></li>
+        <li><Link to="/">experience</Link></li>
+        <li><Link to="/">contact</Link></li>
+        </ul>
         </div>
 
         {/* Dark Mode Toggle and Hamburger Menu (Mobile) */}
@@ -74,24 +65,14 @@ const Navbar: React.FC = () => {
         style={{ maxHeight: 'calc(100vh - 100px)', paddingTop: '60px' }} // Adjust height and top padding
       >
         <div className="flex flex-col items-start space-y-4 py-4 px-6 overflow-y-auto h-full">
-          <a href="#home" className="hover:text-gray-300">
-            Home
-          </a>
-          <a href="#about" className="hover:text-gray-300">
-            About
-          </a>
-          <a href="#projects" className="hover:text-gray-300">
-            Projects
-          </a>
-          <a href="#skills" className="hover:text-gray-300">
-            Skills
-          </a>
-          <a href="#experience" className="hover:text-gray-300">
-            Experience
-          </a>
-          <a href="#contact" className="hover:text-gray-300">
-            Contact
-          </a>
+        <ul>
+        <li><Link to="/">Home</Link></li>
+        <li><Link to="/">About</Link></li>
+        <li><Link to="/">projects</Link></li>
+        <li><Link to="/">skills</Link></li>
+        <li><Link to="/">experience</Link></li>
+        <li><Link to="/">contact</Link></li>
+        </ul>
         </div>
       </div>
     </nav>

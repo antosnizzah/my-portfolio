@@ -18,7 +18,7 @@ const App: React.FC = () => {
       <ProfileSection />
       <AboutMe/>
       <MySkills/>
-      <ProjectsSection/>
+      <ProjectsSection/>-
       <WhatImDoing/>
       <Footer />
      
