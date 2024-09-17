@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
-import {Link } from  'react-router-dom'
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
   const [darkMode, setDarkMode] = useState(false);
@@ -9,6 +9,8 @@ const Navbar: React.FC = () => {
   const toggleDarkMode = () => {
     setDarkMode(!darkMode);
     document.documentElement.classList.toggle('dark', !darkMode);
+    document.body.classList.toggle('dark:bg-gray-900', !darkMode);
+    document.body.classList.toggle('bg-white', darkMode);
   };
 
   const toggleMenu = () => {
@@ -20,21 +22,19 @@ const Navbar: React.FC = () => {
       <div className="container mx-auto flex justify-between items-center px-4 md:px-8">
         {/* Logo or Brand */}
         <div className="flex items-center space-x-8">
-          <a href="#home" className="text-lg font-bold hover:text-gray-300">
+          <Link to="/" className="text-lg font-bold hover:text-gray-300">
             My Portfolio
-          </a>
+          </Link>
         </div>
 
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-8">
-          <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/">About</Link></li>
-        <li><Link to="/">projects</Link></li>
-        <li><Link to="/">skills</Link></li>
-        <li><Link to="/">experience</Link></li>
-        <li><Link to="/">contact</Link></li>
-        </ul>
+          <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
+          <Link to="/about" className="hover:text-gray-300 transition-colors">About</Link>
+          <Link to="/projects" className="hover:text-gray-300 transition-colors">Projects</Link>
+          <Link to="/skills" className="hover:text-gray-300 transition-colors">Skills</Link>
+          <Link to="/experience" className="hover:text-gray-300 transition-colors">Experience</Link>
+          <Link to="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
         </div>
 
         {/* Dark Mode Toggle and Hamburger Menu (Mobile) */}
@@ -59,20 +59,53 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Navigation Links (Left-Side) */}
       <div
-        className={`fixed top-0 left-0 w-64 bg-gray-900 transition-transform duration-500 ease-in-out transform ${
+        className={`fixed top-0 left-0 w-64 h-full bg-gray-900 transition-transform duration-500 ease-in-out transform ${
           isMenuOpen ? 'translate-x-0' : '-translate-x-full'
         }`}
-        style={{ maxHeight: 'calc(100vh - 100px)', paddingTop: '60px' }} // Adjust height and top padding
       >
-        <div className="flex flex-col items-start space-y-4 py-4 px-6 overflow-y-auto h-full">
-        <ul>
-        <li><Link to="/">Home</Link></li>
-        <li><Link to="/">About</Link></li>
-        <li><Link to="/">projects</Link></li>
-        <li><Link to="/">skills</Link></li>
-        <li><Link to="/">experience</Link></li>
-        <li><Link to="/">contact</Link></li>
-        </ul>
+        <div className="flex flex-col items-start space-y-4 py-4 px-6">
+          <Link
+            to="/"
+            className="text-lg font-medium hover:text-gray-300"
+            onClick={toggleMenu} // Close the menu on link click
+          >
+            Home
+          </Link>
+          <Link
+            to="/about"
+            className="text-lg font-medium hover:text-gray-300"
+            onClick={toggleMenu}
+          >
+            About
+          </Link>
+          <Link
+            to="/projects"
+            className="text-lg font-medium hover:text-gray-300"
+            onClick={toggleMenu}
+          >
+            Projects
+          </Link>
+          <Link
+            to="/skills"
+            className="text-lg font-medium hover:text-gray-300"
+            onClick={toggleMenu}
+          >
+            Skills
+          </Link>
+          <Link
+            to="/experience"
+            className="text-lg font-medium hover:text-gray-300"
+            onClick={toggleMenu}
+          >
+            Experience
+          </Link>
+          <Link
+            to="/contact"
+            className="text-lg font-medium hover:text-gray-300"
+            onClick={toggleMenu}
+          >
+            Contact
+          </Link>
         </div>
       </div>
     </nav>
