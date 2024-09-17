@@ -39,7 +39,7 @@ const ProfileSection: React.FC = () => {
             Hello, I'm Antony Gichuki
           </h1>
           <h2 className="text-3xl mb-4">
-            And I'm a <span className="text-purple-300">Frontend Developer</span>
+            And I'm a <span className="text-purple-300">Fullstack Developer</span>
           </h2>
           <p className="text-xl mb-8">
             {text}

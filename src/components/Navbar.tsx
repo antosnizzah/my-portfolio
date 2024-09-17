@@ -30,11 +30,11 @@ const Navbar: React.FC = () => {
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-8">
           <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
-          <Link to="/about" className="hover:text-gray-300 transition-colors">About</Link>
-          <Link to="/projects" className="hover:text-gray-300 transition-colors">Projects</Link>
-          <Link to="/skills" className="hover:text-gray-300 transition-colors">Skills</Link>
-          <Link to="/experience" className="hover:text-gray-300 transition-colors">Experience</Link>
-          <Link to="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
+          <Link to="about" className="hover:text-gray-300 transition-colors">About</Link>
+          <Link to="projects" className="hover:text-gray-300 transition-colors">Projects</Link>
+          <Link to="skills" className="hover:text-gray-300 transition-colors">Skills</Link>
+          <Link to="experience" className="hover:text-gray-300 transition-colors">Experience</Link>
+          <Link to="contact" className="hover:text-gray-300 transition-colors">Contact</Link>
         </div>
 
         {/* Dark Mode Toggle and Hamburger Menu (Mobile) */}
