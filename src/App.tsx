@@ -4,13 +4,14 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ProfileSection from './components/profilesection';
 import Footer from './components/Footer';
+import Portfolio from '../pages/portfolio';
 
 const App: React.FC = () => {
   return (
     <div className="dark:bg-gray-900 dark:text-white">
       <Navbar />
       <ProfileSection />
-      {/* Renders the components based on the route */}
+      <Portfolio /> 
       <Outlet />
       <Footer />
     </div>
