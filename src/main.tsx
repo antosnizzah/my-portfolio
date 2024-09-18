@@ -3,7 +3,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
-// import Error from './pages/Error.tsx';
+import Error from '../pages/Error.tsx';
 import App from './App.tsx';
 import AboutMe from './components/About.tsx';
 import ProjectsSection from './components/Projects.tsx';
@@ -16,7 +16,7 @@ const router = createBrowserRouter([
   {
     path: '/',
     element: <App />, // Main layout with Navbar, ProfileSection, Footer, etc.
-    // errorElement: <Error />, // Error page for handling unknown routes
+    errorElement: <Error />, // Error page for handling unknown routes
     children: [
       {
         path: 'about',

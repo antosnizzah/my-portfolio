@@ -4,7 +4,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './components/Navbar';
 import ProfileSection from './components/profilesection';
 import Footer from './components/Footer';
-import Portfolio from '../pages/portfolio';
+// import Portfolio from '../pages/portfolio';
 
 
 const App: React.FC = () => {
@@ -12,7 +12,7 @@ const App: React.FC = () => {
     <div className="dark:bg-gray-900 dark:text-white">
       <Navbar />
       <ProfileSection />
-      <Portfolio />
+      {/* <Portfolio /> */}
       <Outlet />
       <Footer />
     </div>
