@@ -9,7 +9,7 @@ import AboutMe from './components/About.tsx';
 import ProjectsSection from './components/Projects.tsx';
 import MySkills from './components/Skills.tsx';
 import WhatImDoing from './components/Experience.tsx';
-// import Contact from './components/Contact.tsx';
+import Contact from './components/Contact.tsx';
 
 // Define your routes
 const router = createBrowserRouter([
@@ -34,10 +34,10 @@ const router = createBrowserRouter([
         path: 'experience',
         element: <WhatImDoing />,
       },
-      // {
-      //   path: 'contact',
-      //   element: <Contact />,
-      // }
+      {
+        path: 'contact',
+        element: <Contact />,
+      }
     ],
   },
 ]);
