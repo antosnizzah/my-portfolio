@@ -20,16 +20,19 @@ const ContactMe = () => {
   const sendEmail = (e: React.FormEvent) => {
     e.preventDefault();
 
+    // Reset status message
+    setStatus('');
+
     emailjs
       .send(
         'service_h7ni7tr', // Replace with your EmailJS service ID
         'template_eruvams', // Replace with your EmailJS template ID
         { name: formData.name, email: formData.email, message: formData.message }, 
-        'Sa9WTo-pAtKQnUx5M' // Replace with your EmailJS user ID
+        'Sa9WTo-pAtKQnUx5M' // Replace with your EmailJS public key (User ID)
       )
       .then(
         () => {
-          setStatus('Message Sent!');
+          setStatus('Message Sent! ✅');
           setFormData({
             name: '',
             email: '',
@@ -37,16 +40,16 @@ const ContactMe = () => {
           });
         },
         (error) => {
-          setStatus('Failed to send message');
+          setStatus('Failed to send message ❌');
           console.error('Error:', error);
         }
       );
   };
 
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4">
-      <div className="max-w-3xl mx-auto p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
-        <h2 className="text-3xl font-bold text-center mb-6 dark:text-white">
+    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4 flex justify-center items-center">
+      <div className="max-w-3xl w-full p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg">
+        <h2 className="text-3xl font-bold text-center mb-6 text-gray-800 dark:text-white">
           Contact Me
         </h2>
 
@@ -88,13 +91,14 @@ const ContactMe = () => {
 
           <button
             type="submit"
-            className="w-full py-3 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:outline-none transition duration-300 ease-in-out"
+            className="w-full py-3 text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:ring focus:ring-blue-300 focus:outline-none transition duration-300 ease-in-out hover:scale-105 transform"
           >
             Send Message
           </button>
 
+          {/* Status message */}
           {status && (
-            <p className={`text-center mt-4 ${status === 'Message Sent!' ? 'text-green-500' : 'text-red-500'}`}>
+            <p className={`text-center mt-4 ${status.includes('✅') ? 'text-green-500' : 'text-red-500'}`}>
               {status}
             </p>
           )}
