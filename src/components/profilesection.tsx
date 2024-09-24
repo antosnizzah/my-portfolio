@@ -1,10 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Linkedin, Github } from 'lucide-react';
 import { Fade } from 'react-awesome-reveal';
 import { useTypewriter, Cursor } from 'react-simple-typewriter';
 import profileImage from '../assets/IMG_8390.jpg'; // Adjust path based on your folder structure
 
 const ProfileSection: React.FC = () => {
+  const [darkMode, setDarkMode] = useState(false); // For toggling dark/light mode
   const [text] = useTypewriter({
     words: ["I'm a passionate software engineer with a knack for creating intuitive user interfaces."],
     loop: 1,
@@ -14,16 +15,23 @@ const ProfileSection: React.FC = () => {
   });
 
   return (
-    <section className="relative flex flex-col md:flex-row items-center justify-center min-h-screen bg-black text-white dark:text-gray-300 text-center md:text-left p-6">
-      {/* Live Animated Background */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="animate-pulse opacity-50 bg-gradient-to-r from-purple-500 via-indigo-500 to-pink-500 w-full h-full"></div>
-      </div>
+    <section
+      className={`relative flex flex-col md:flex-row items-center justify-center min-h-screen ${
+        darkMode ? 'bg-black text-white' : 'bg-gray-100 text-black'
+      } transition-colors duration-500 p-6`}
+    >
+      {/* Toggle Button */}
+      <button
+        onClick={() => setDarkMode(!darkMode)}
+        className="absolute top-4 right-4 text-sm p-2 border rounded-full focus:outline-none hover:bg-gray-200 dark:hover:bg-gray-700 transition"
+      >
+        {darkMode ? 'Light Mode' : 'Dark Mode'}
+      </button>
 
-      {/* Content on top of the background */}
+      {/* Content */}
       <Fade direction="left" triggerOnce>
         <div className="relative mb-6 md:mb-0 md:mr-12">
-          <div className="w-64 h-64 rounded-full border-8 border-white dark:border-gray-300 flex items-center justify-center p-1 animate-spin-slow mt-12 md:mt-0"> {/* Added mt-12 for spacing on small screens */}
+          <div className={`w-64 h-64 rounded-full border-8 ${darkMode ? 'border-white' : 'border-black'} flex items-center justify-center p-1 animate-spin-slow mt-12 md:mt-0`}>
             <img
               src={profileImage}
               alt="Profile"
@@ -35,24 +43,43 @@ const ProfileSection: React.FC = () => {
 
       <Fade direction="right" triggerOnce>
         <div className="relative z-10">
-          <h1 className="text-5xl font-bold mb-4 text-cyan-300">
+          <h1 className={`text-5xl font-bold mb-4 ${darkMode ? 'text-gray-300' : 'text-black'}`}>
             Hello, I'm Antony Gichuki
           </h1>
           <h2 className="text-3xl mb-4">
-            And I'm a <span className="text-purple-300">Fullstack Developer</span>
+            And I'm a{' '}
+            <span className={`${darkMode ? 'text-gray-400' : 'text-black'}`}>Fullstack Developer</span>
           </h2>
           <p className="text-xl mb-8">
             {text}
-            <Cursor cursorColor="white" />
+            <Cursor cursorColor={darkMode ? 'white' : 'black'} />
           </p>
-          <button className="bg-purple-600 hover:bg-purple-800 text-white font-bold py-3 px-6 rounded-full mb-8">
+          <button
+            className={`${
+              darkMode ? 'bg-gray-800 hover:bg-gray-600 text-white' : 'bg-black hover:bg-gray-700 text-white'
+            } font-bold py-3 px-6 rounded-full mb-8 transition-all duration-300 transform hover:scale-105`}
+          >
             Download CV
           </button>
           <div className="flex space-x-6 justify-center md:justify-start">
-            <a href="https://www.linkedin.com/in/antony-gichuki-44a2372ab/" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://www.linkedin.com/in/antony-gichuki-44a2372ab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transform transition-transform duration-300 hover:scale-110 ${
+                darkMode ? 'hover:text-gray-400' : 'hover:text-black'
+              }`}
+            >
               <Linkedin className="w-8 h-8" />
             </a>
-            <a href="https://github.com/antosnizzah" target="_blank" rel="noopener noreferrer">
+            <a
+              href="https://github.com/antosnizzah"
+              target="_blank"
+              rel="noopener noreferrer"
+              className={`transform transition-transform duration-300 hover:scale-110 ${
+                darkMode ? 'hover:text-gray-400' : 'hover:text-black'
+              }`}
+            >
               <Github className="w-8 h-8" />
             </a>
           </div>
