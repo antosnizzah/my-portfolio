@@ -57,15 +57,15 @@ const ContactMe = () => {
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
               <Mail className="w-6 h-6 text-blue-500" />
-              <span className="text-gray-800 dark:text-gray-300">email@example.com</span>
+              <span className="text-gray-800 dark:text-gray-300">antonygatitu327@gmail.com</span>
             </div>
             <div className="flex items-center space-x-4">
               <Phone className="w-6 h-6 text-blue-500" />
-              <span className="text-gray-800 dark:text-gray-300">+123-456-7890</span>
+              <span className="text-gray-800 dark:text-gray-300">+254799163101</span>
             </div>
             <div className="flex items-center space-x-4">
               <MapPin className="w-6 h-6 text-blue-500" />
-              <span className="text-gray-800 dark:text-gray-300">123 Main St, City, Country</span>
+              <span className="text-gray-800 dark:text-gray-300">Kutus Kirinyaga </span>
             </div>
           </div>
         </div>
