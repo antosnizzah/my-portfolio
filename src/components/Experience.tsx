@@ -26,7 +26,7 @@ const services = [
 
 const WhatImDoing: React.FC = () => {
   return (
-    <div className="bg-gray-900 text-white py-12">
+    <div className="bg-gray-900 text-white py-12 mt-24">
       <div className="text-center mb-8">
         <h2 className="text-4xl font-bold">What I'm Doing</h2>
       </div>

@@ -46,7 +46,7 @@ const ContactMe = () => {
   };
 
   return (
-    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4 flex justify-center items-center">
+    <section className="min-h-screen bg-gray-50 dark:bg-gray-900 py-10 px-4 flex justify-center items-center mt-10">
       <div className="max-w-5xl w-full p-8 bg-white dark:bg-gray-800 rounded-lg shadow-lg grid grid-cols-1 md:grid-cols-2 gap-8 animate-fade-in">
         {/* Left Side Content */}
         <div className="space-y-6">

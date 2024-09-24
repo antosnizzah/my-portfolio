@@ -3,12 +3,12 @@ import { Linkedin, Github, Mail, Phone, Calendar, MapPin } from 'lucide-react';
 
 const AboutMe: React.FC = () => {
   return (
-    <div className="min-h-screen bg-gradient-to-r from-purple-500 to-indigo-500 dark:from-gray-800 dark:to-black text-white dark:text-gray-300 p-6">
+    <div className="min-h-screen bg-gradient-to-r from-purple-500 to-indigo-500 dark:from-gray-800 dark:to-black text-white dark:text-gray-300 p-6 mt-24">
       <div className="flex flex-col md:flex-row items-center justify-center md:space-x-8">
         {/* Left side: Profile Card */}
-        <div className="w-full md:w-1/3 lg:w-1/4 bg-gray-900 p-6 rounded-lg shadow-lg">
-          <h2 className="text-3xl font-bold text-center mb-4">anthony gichuki</h2>
-          <p className="text-center text-gray-400 mb-6">Full-stack  Software Engineer</p>
+        <div className="w-full md:w-1/3 lg:w-1/4 bg-gray-900 p-6 rounded-lg shadow-lg transform transition-transform duration-500 hover:scale-105">
+          <h2 className="text-3xl font-bold text-center mb-4">Anthony Gichuki</h2>
+          <p className="text-center text-gray-400 mb-6">Full-stack Software Engineer</p>
           <hr className="border-gray-700 mb-6" />
           <div className="space-y-4">
             <div className="flex items-center space-x-4">
