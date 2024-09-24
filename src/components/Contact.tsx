@@ -26,7 +26,7 @@ const ContactMe = () => {
     emailjs
       .send(
         'service_h7ni7tr', // Replace with your EmailJS service ID
-        'template_eruvams', // Replace with your EmailJS template ID
+        'template_lt6qlvr', // Replace with your EmailJS template ID
         { name: formData.name, email: formData.email, message: formData.message }, 
         'Sa9WTo-pAtKQnUx5M' // Replace with your EmailJS public key (User ID)
       )
