@@ -49,10 +49,10 @@ const ProfileSection: React.FC = () => {
             Download CV
           </button>
           <div className="flex space-x-6 justify-center md:justify-start">
-            <a href="https://www.linkedin.com/in/your-profile" target="_blank" rel="noopener noreferrer">
+            <a href="https://www.linkedin.com/in/antony-gichuki-44a2372ab/" target="_blank" rel="noopener noreferrer">
               <Linkedin className="w-8 h-8" />
             </a>
-            <a href="https://github.com/your-profile" target="_blank" rel="noopener noreferrer">
+            <a href="https://github.com/antosnizzah" target="_blank" rel="noopener noreferrer">
               <Github className="w-8 h-8" />
             </a>
           </div>
