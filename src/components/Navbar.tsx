@@ -1,17 +1,14 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-const Navbar: React.FC = () => {
-  const [darkMode, setDarkMode] = useState(false);
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+interface NavbarProps {
+  darkMode: boolean;
+  toggleDarkMode: () => void;
+}
 
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-    document.documentElement.classList.toggle('dark', !darkMode);
-    document.body.classList.toggle('dark:bg-gray-900', !darkMode);
-    document.body.classList.toggle('bg-white', darkMode);
-  };
+const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -67,7 +64,7 @@ const Navbar: React.FC = () => {
           <Link
             to="/"
             className="text-lg font-medium hover:text-gray-300"
-            onClick={toggleMenu} // Close the menu on link click
+            onClick={toggleMenu}
           >
             Home
           </Link>
