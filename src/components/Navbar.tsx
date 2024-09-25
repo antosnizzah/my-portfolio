@@ -1,14 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react'; // <-- Add this import
 import { Moon, Sun, Menu, X } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
-interface NavbarProps {
-  darkMode: boolean;
-  toggleDarkMode: () => void;
-}
-
-const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+const Navbar: React.FC<{ darkMode: boolean; toggleDarkMode: () => void }> = ({ darkMode, toggleDarkMode }) => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false); // You already have this hook here
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
@@ -27,11 +22,11 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
         {/* Desktop Navigation Links */}
         <div className="hidden md:flex space-x-8">
           <Link to="/" className="hover:text-gray-300 transition-colors">Home</Link>
-          <Link to="about" className="hover:text-gray-300 transition-colors">About</Link>
-          <Link to="projects" className="hover:text-gray-300 transition-colors">Projects</Link>
-          <Link to="skills" className="hover:text-gray-300 transition-colors">Skills</Link>
-          <Link to="experience" className="hover:text-gray-300 transition-colors">Experience</Link>
-          <Link to="contact" className="hover:text-gray-300 transition-colors">Contact</Link>
+          <Link to="/about" className="hover:text-gray-300 transition-colors">About</Link>
+          <Link to="/projects" className="hover:text-gray-300 transition-colors">Projects</Link>
+          <Link to="/skills" className="hover:text-gray-300 transition-colors">Skills</Link>
+          <Link to="/experience" className="hover:text-gray-300 transition-colors">Experience</Link>
+          <Link to="/contact" className="hover:text-gray-300 transition-colors">Contact</Link>
         </div>
 
         {/* Dark Mode Toggle and Hamburger Menu (Mobile) */}
@@ -61,46 +56,22 @@ const Navbar: React.FC<NavbarProps> = ({ darkMode, toggleDarkMode }) => {
         }`}
       >
         <div className="flex flex-col items-start space-y-4 py-4 px-6">
-          <Link
-            to="/"
-            className="text-lg font-medium hover:text-gray-300"
-            onClick={toggleMenu}
-          >
+          <Link to="/" className="text-lg font-medium hover:text-gray-300" onClick={toggleMenu}>
             Home
           </Link>
-          <Link
-            to="/about"
-            className="text-lg font-medium hover:text-gray-300"
-            onClick={toggleMenu}
-          >
+          <Link to="/about" className="text-lg font-medium hover:text-gray-300" onClick={toggleMenu}>
             About
           </Link>
-          <Link
-            to="/projects"
-            className="text-lg font-medium hover:text-gray-300"
-            onClick={toggleMenu}
-          >
+          <Link to="/projects" className="text-lg font-medium hover:text-gray-300" onClick={toggleMenu}>
             Projects
           </Link>
-          <Link
-            to="/skills"
-            className="text-lg font-medium hover:text-gray-300"
-            onClick={toggleMenu}
-          >
+          <Link to="/skills" className="text-lg font-medium hover:text-gray-300" onClick={toggleMenu}>
             Skills
           </Link>
-          <Link
-            to="/experience"
-            className="text-lg font-medium hover:text-gray-300"
-            onClick={toggleMenu}
-          >
+          <Link to="/experience" className="text-lg font-medium hover:text-gray-300" onClick={toggleMenu}>
             Experience
           </Link>
-          <Link
-            to="/contact"
-            className="text-lg font-medium hover:text-gray-300"
-            onClick={toggleMenu}
-          >
+          <Link to="/contact" className="text-lg font-medium hover:text-gray-300" onClick={toggleMenu}>
             Contact
           </Link>
         </div>
